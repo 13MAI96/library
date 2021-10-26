@@ -1,6 +1,6 @@
-# library
-Y si hacemos un muñeco?
+# Y si hacemos un muñeco?
 
+# Library
 
 # Como crear un nuevo diseño?
 Crear nueva rama feature/new/{nombre diseño}
