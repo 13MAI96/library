@@ -1,1 +1,15 @@
-<p>carrousel works!</p>
+<div class="container">
+    <button class="carrouselFuncion prev" (click)="prev()"></button>
+    <div class="child">
+        <app-img id="i" [imagen]=imagenes[prevPosition] alt=img.descripcion clases="previo" class="cont-previo"></app-img>
+        <app-img id="i" [imagen]=imagenes[position] alt=img.descripcion clases="actual" class="cont-actual"></app-img>
+        <app-img id="i" [imagen]=imagenes[nextPosition] alt=img.descripcion clases="siguiente" class="cont-siguiente"></app-img>
+    </div>
+    <div class="carrouselNavigation">
+        <div>
+            <button *ngFor="let img of imagenes; let i = index" (click)=selectView(i) [class]="i == position? 'buttonNavigation selected': 'buttonNavigation'">
+            </button>
+        </div>
+    </div>
+    <button class="carrouselFuncion next" (click)="next()"></button>
+</div>

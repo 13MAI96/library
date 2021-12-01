@@ -1,0 +1,77 @@
+*::-webkit-scrollbar{
+    -webkit-appearance: none;
+}
+
+*::-webkit-scrollbar-thumb:horizontal{
+    display: none;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    .child{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .next{
+        right: 2%;
+    }
+    .prev{
+        left: 2%;
+    }
+    .carrouselFuncion{
+        position: absolute;
+        height: 10%;
+        aspect-ratio: 1/1;
+        border-radius: 0.5rem;
+        background-color: #0000000F;
+        background-position: 50% 50%;
+        box-sizing: border-box;
+        z-index: 5;
+        top: 45%;
+    }
+    .carrouselNavigation{
+        display: flex;
+        position: absolute;
+        bottom: 10%;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        div{
+            width: 10rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    .buttonNavigation{
+        color: #c2c2c2;
+        background-color: #8b8b8b;
+        border-radius: 50%;
+        border: #c2c2c2;
+        aspect-ratio: 1/1;
+        width: 0.5rem;
+    }
+    .selected{
+        background-color: #ffffff;
+    }
+}
+
+.cont-previo{
+    position: absolute;
+    left: 0;
+    filter: blur(1px);
+    z-index: -1;
+}
+.cont-siguiente{
+    position: absolute;
+    filter: blur(1px);
+    right: 0;
+    z-index: -1;
+}
