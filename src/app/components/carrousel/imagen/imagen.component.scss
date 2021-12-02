@@ -1,7 +1,11 @@
 img{
     display: flex;
-    aspect-ratio: 30/9;
+    
     border-radius: 10px;
+}
+
+.r30-9{
+    aspect-ratio: 30/9;
 }
 .actual{
     width: 98vw;
@@ -31,4 +35,8 @@ img{
 }
 .descripcion{
 
+}
+
+.hidden{
+    display: none;
 }

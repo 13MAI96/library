@@ -18,6 +18,9 @@ import { CarrouselRoutingModule } from './carrousel-routing.module';
     //BrowserAnimationsModule,
     CommonModule,
     CarrouselRoutingModule
+  ],
+  exports:[
+    CarrouselComponent
   ]
 })
 export class CarrouselModule { }

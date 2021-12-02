@@ -1,0 +1,27 @@
+<form [formGroup]="inputs">
+  <label for="title">Titulos</label>
+  <select class="" name="title" formControlName="title">
+    <option value="true">SI</option>
+    <option value="false">NO</option>
+  </select>
+  <label for="ratio">Aspect Ratio</label>
+  <select class="" name="ratio" formControlName="ratio">
+    <option value="true">SI</option>
+    <option value="false">NO</option>
+  </select>
+  <label for="botones">Visualizar Botones</label>
+  <select class="" name="botones" formControlName="buttons">
+    <option value="true">SI</option>
+    <option value="false">NO</option>
+  </select>
+  <label for="descripcion">Descripcion</label>
+  <select class="" name="descripcion" formControlName="description">
+    <option value="true">SI</option>
+    <option value="false">NO</option>
+  </select>
+</form>
+<carrousel 
+  [description]="inputs.value.description" 
+  [ratio]="inputs.value.ratio" 
+  [buttons]="inputs.value.buttons" 
+  [title]="inputs.value.title"></carrousel>

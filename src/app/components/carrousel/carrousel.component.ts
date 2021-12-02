@@ -1,21 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CarrouselAnimations } from 'src/app/animations/carrousel/carrousel.animations';
 import { Imagen } from 'src/app/models/carrousel/imagenes.model';
 
 @Component({
-  selector: 'app-carrousel',
+  selector: 'carrousel',
   templateUrl: './carrousel.component.html',
   styleUrls: ['./carrousel.component.scss']
 })
 export class CarrouselComponent implements OnInit {
+  @Input() description: boolean = false;
+  @Input() title!: boolean;
+  @Input() buttons: boolean = false;
+  @Input() ratio: string = "30-9";
   imagenes: Imagen[] = [];
   position: number = 1;
   prevPosition: number = 0;
   nextPosition: number = 2;
-  clases: string[] = [' transitionOut', ' transitionIn', ' notVisible', ''];
-  prevImagenClass: string = 'notVisible';
-  actualImagenClass: string = '';
-  isFocused: number = 0;
+  buttonsVisibility: string = "";
 
   constructor() {
   }
@@ -45,14 +46,8 @@ export class CarrouselComponent implements OnInit {
   }
 
   next(){
-    setTimeout(() => {
-      this.actualImagenClass = this.clases[3];
-      this.prevImagenClass = this.clases[2];
-    }, 5000)
     this.prevPosition = this.position;
     this.position = this.nextPosition;
-    this.prevImagenClass = this.clases[0];
-    this.actualImagenClass = this.clases[1];
     this.nextPosition += 1;
     if(this.nextPosition >= this.imagenes.length){
       this.nextPosition = 0;

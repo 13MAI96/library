@@ -2,9 +2,10 @@
     <img 
         src={{imagen.url}} 
         alt={{imagen.descripcion}}
-        [class]=clases>
+        [ngClass]="clases"
+        class="r30-9">
     <div class="contenedor">
-        <h2 class="title">{{imagen.title | uppercase}}</h2>
-        <p class="descripcion">{{imagen.descripcion}}</p>
+        <h2 [ngClass]="title ? '' : 'hidden'" class="title">{{imagen.title | uppercase}}</h2>
+        <p [ngClass]="description ? '' : 'hidden'" class="descripcion">{{imagen.descripcion}}</p>
     </div>
 </div>

@@ -10,6 +10,8 @@ import { Imagen } from 'src/app/models/carrousel/imagenes.model';
 export class ImagenComponent implements OnInit {
   @Input() imagen!: Imagen;
   @Input() clases!: string;
+  @Input() title: boolean = false;
+  @Input() description: boolean = false;
 
   constructor() { }
 

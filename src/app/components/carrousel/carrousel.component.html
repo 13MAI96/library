@@ -1,8 +1,8 @@
 <div class="container">
-    <button class="carrouselFuncion prev" (click)="prev()"></button>
+    <button  [ngClass]="buttons? '' : 'hidden'" class="carrouselFuncion prev" (click)="prev()"></button>
     <div class="child">
         <app-img id="i" [imagen]=imagenes[prevPosition] alt=img.descripcion clases="previo" class="cont-previo"></app-img>
-        <app-img id="i" [imagen]=imagenes[position] alt=img.descripcion clases="actual" class="cont-actual"></app-img>
+        <app-img id="i" [title]="title" [imagen]=imagenes[position] alt=img.descripcion clases="actual" class="cont-actual"></app-img>
         <app-img id="i" [imagen]=imagenes[nextPosition] alt=img.descripcion clases="siguiente" class="cont-siguiente"></app-img>
     </div>
     <div class="carrouselNavigation">
@@ -11,5 +11,5 @@
             </button>
         </div>
     </div>
-    <button class="carrouselFuncion next" (click)="next()"></button>
+    <button [ngClass]="buttons? 'visible' : 'hidden'" class="carrouselFuncion next" (click)="next()"></button>
 </div>

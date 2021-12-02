@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {
-    path: '',
-    loadChildren: () => import('src/app/modules/carrousel/carrousel.module').then(m => m.CarrouselModule)
-  }
+  // {
+  //   path: '',
+  //   loadChildren: () => import('src/app/modules/carrousel/carrousel.module').then(m => m.CarrouselModule)
+  // }
 ];
 
 @NgModule({
