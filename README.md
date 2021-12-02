@@ -2,6 +2,11 @@
 
 # Library
 
+# IMPORTANTE
+
+No usar angular material, ningun tipo de libreria de estilos o similar
+
+
 # Como crear un nuevo diseño?
 
 Crear nueva rama feature/new/{nombre diseño}
